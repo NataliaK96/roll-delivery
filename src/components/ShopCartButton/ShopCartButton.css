@@ -1,0 +1,18 @@
+.shopCart {
+  display: flex;
+  margin-right: 5%;
+  align-items: center;
+}
+.cartButton {
+  font-size: 18px;
+  padding: 2px 6px;
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.cartButton:hover {
+  background: transparent;
+  color: black;
+  border-color: black;
+}

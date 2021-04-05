@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Header, Main, NameApp } from './App.styles';
+import { MenuCard } from './components/Menu/Card/Card';
+import { ShopCartButton } from './components/ShopCartButton/ShopCartButton';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <NameApp>
+          <img src="logo.png" alt="logo" className="logo"/>
+          Roll delivery
+        </NameApp>
+        <ShopCartButton onClick={()=>{}}/>
+      </Header>
+      <Main>
+        <MenuCard/>
+      </Main>
     </div>
   );
 }
