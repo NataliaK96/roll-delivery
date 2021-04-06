@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Header, Main, NameApp } from './App.styles';
-import { MenuCard } from './components/Menu/Card/Card';
+import { MenuCards } from './components/Menu/MenuCards/Cards';
 import { ShopCartButton } from './components/ShopCartButton/ShopCartButton';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <ShopCartButton onClick={()=>{}}/>
       </Header>
       <Main>
-        <MenuCard/>
+        <MenuCards/>
       </Main>
     </div>
   );
