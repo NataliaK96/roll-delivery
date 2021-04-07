@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import { Footer, Header, Main, NameApp } from './App.styles';
+import { Footer, Header, Main, NameApp, Products } from './App.styles';
 import { MenuCards } from './components/Menu/MenuCards/Cards';
+import { SelProducts } from './components/SelProducts/SelProducts';
 import { ShopCartButton } from './components/ShopCartButton/ShopCartButton';
 
 function App() {
@@ -9,15 +10,18 @@ function App() {
     <div className="App">
       <Header>
         <NameApp>
-          <img src="logo.png" alt="logo" className="logo"/>
+          <img src="logo.png" alt="logo" className="logo" />
           Roll delivery
         </NameApp>
-        <ShopCartButton onClick={()=>{}}/>
+        <Products>
+        <SelProducts/>
+        <ShopCartButton onClick={() => {}} />
+        </Products>
       </Header>
       <Main>
-        <MenuCards/>
+        <MenuCards />
       </Main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

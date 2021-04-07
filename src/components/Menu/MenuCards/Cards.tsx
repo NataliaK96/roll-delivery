@@ -9,14 +9,14 @@ import {store} from '../../../store'
 const { Meta } = Card;
 
 export const MenuCards = observer(() => {
-  const {rolls, removeProduct, addProduct, getValueById, sum} = store
+  const {rolls, removeProduct, addProduct, getValueById} = store
   const menuCards = rolls.map((i) => {
     return (
       <div className="menuCard">
         <Card style={{ width: 240 }} cover={<img alt={i.alt} src={i.src} />}>
           <Meta title={i.name} description={i.structure} className="name" />
           <div className="add">
-            <div>{i.price} RUB</div>
+            <div>{i.price} ₽</div>
             <Count value={getValueById(i.id)} inc={()=>addProduct(i.id)} dec={()=>removeProduct(i.id)} />
           </div>
         </Card>
@@ -24,6 +24,5 @@ export const MenuCards = observer(() => {
     );
   });
   return <>
-  <div>{sum}</div>
   <div className="menuCards">{menuCards}</div></>;
 });

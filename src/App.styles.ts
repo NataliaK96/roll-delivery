@@ -18,11 +18,12 @@ margin-left: 5%;
 font-size: 28px;
 `
 
-export const ConfirmPanel = styled.div`
+export const Products = styled.div`
 display: flex;
 margin-right: 5%;
-align-items: center;
+font-size: 18px
 `
+
 export const Main = styled.div`
 display: flex;
 flex-direction: column;

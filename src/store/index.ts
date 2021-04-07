@@ -39,6 +39,13 @@ const Store = types
         return acc + totalPrice;
       }, 0);
     },
+    get sumCount() {
+      return self.basket.reduce((acc, p) => {
+        const product = self.rolls.find((r) => r.id === p.id);
+        const count = product ? p.count : 0;
+        return acc + count;
+      }, 0);
+    },
     getValueById(id: number){
         const product = self.basket.find((item)=> item.id === id);
         return product? product.count: 0
