@@ -1,7 +1,7 @@
 import React from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import { MinusOutlined } from '@ant-design/icons';
-import './Count.css'
+import './count.css'
 
 type Props = {
   value: number,

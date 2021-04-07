@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Button} from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import './ShopCartButton.css';
+import './buttons.css';
 
 type Props = {
   onClick: () => void;

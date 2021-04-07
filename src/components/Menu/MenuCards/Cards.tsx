@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Card } from 'antd';
-import './Cards.css';
+import './cards.css';
 import { Count } from '../../Count/Count';
 import { observer } from 'mobx-react';
 import {store} from '../../../store'

@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import 'antd/dist/antd.css';
 import { ShoppingOutlined } from '@ant-design/icons';
-import './SelProducts.css';
+import './selProducts.css';
 import { store } from '../../store';
 
 export const SelProducts = observer(() => {

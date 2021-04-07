@@ -1,26 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
-import { Footer, Header, Main, NameApp, Products } from './App.styles';
-import { MenuCards } from './components/Menu/MenuCards/Cards';
-import { SelProducts } from './components/SelProducts/SelProducts';
-import { ShopCartButton } from './components/ShopCartButton/ShopCartButton';
+import { Footer } from './App.styles';
+import { Basket } from './views/BasketPage/Basket';
+import { Menu } from './views/MenuPage/Menu';
 
 function App() {
   return (
     <div className="App">
-      <Header>
-        <NameApp>
-          <img src="logo.png" alt="logo" className="logo" />
-          Roll delivery
-        </NameApp>
-        <Products>
-        <SelProducts/>
-        <ShopCartButton onClick={() => {}} />
-        </Products>
-      </Header>
-      <Main>
-        <MenuCards />
-      </Main>
+      <Route path="/" exact render={() => <Menu />} />
+      <Route path="/basket" render={() => <Basket />} />
       <Footer />
     </div>
   );

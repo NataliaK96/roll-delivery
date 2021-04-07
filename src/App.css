@@ -1,3 +1,8 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .logo {
   width: 45px;
   margin-right: 10px;
