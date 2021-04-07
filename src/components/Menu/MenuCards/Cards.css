@@ -8,11 +8,15 @@
   margin: 30px;
 }
 
-.price {
-  font-weight: 500;
-  margin-top: 10px;
-}
-
 .name {
   height: 143px;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
 }

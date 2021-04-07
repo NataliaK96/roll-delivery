@@ -4,9 +4,10 @@ export const Header = styled.div`
 height: 64px;
 color: #fff;
 background-color: #f3cd01;
-box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.5);
+box-shadow: 0 3px 4px -1px rgba(0,0,0,0.5);
 display: flex;
-justify-content: space-between
+justify-content: space-between;
+align-items: center;
 `
 
 export const NameApp = styled.div`
@@ -27,4 +28,10 @@ display: flex;
 flex-direction: column;
 margin: 20px 5%;
 }
+`
+export const Footer = styled.div`
+height: 50px;
+color: #fff;
+background-color: #f3cd01;
+box-shadow: 0 0 4px 1px rgba(0,0,0,0.5);
 `

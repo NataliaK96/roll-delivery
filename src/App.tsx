@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Header, Main, NameApp } from './App.styles';
+import { Footer, Header, Main, NameApp } from './App.styles';
 import { MenuCards } from './components/Menu/MenuCards/Cards';
 import { ShopCartButton } from './components/ShopCartButton/ShopCartButton';
 
@@ -17,6 +17,7 @@ function App() {
       <Main>
         <MenuCards/>
       </Main>
+      <Footer/>
     </div>
   );
 }
