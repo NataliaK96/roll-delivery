@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import './basket.css';
-import { Header, Main, NameApp } from './Basket.styles';
+import { Header, Main, NameApp, ReturnButton } from './Basket.styles';
 import { NavLink } from 'react-router-dom';
 import { GoBack } from '../../components/Buttons/GoBack';
 import { Form } from '../../components/Form/Form';
@@ -14,11 +14,13 @@ export const Basket = () => {
           <img src="logo.png" alt="logo" className="logo" />
           Roll delivery
         </NameApp>
+        <ReturnButton>
+        <NavLink to="/">
+          <GoBack/>
+        </NavLink>
+        </ReturnButton>
       </Header>
       <Main>
-        <NavLink to="/">
-          <GoBack onClick={() => {}} />
-        </NavLink>
         <Form/>
       </Main>
     </>

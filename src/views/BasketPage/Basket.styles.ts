@@ -25,3 +25,7 @@ flex-direction: column;
 margin: 20px 5%;
 }
 `
+export const ReturnButton = styled.div`
+display: flex;
+margin-right: 5%;
+`

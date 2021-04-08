@@ -16,3 +16,16 @@
   color: black;
   border-color: black;
 }
+
+.goBack {
+  background: transparent;
+  color: white;
+  border-color: white;
+  font-size: 18px;
+  padding: 2px 8px;
+}
+.goBack:hover {
+  background: transparent;
+  color: black;
+  border-color: black;
+}
