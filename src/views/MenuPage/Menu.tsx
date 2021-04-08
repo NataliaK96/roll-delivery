@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { MenuCards } from '../../components/Menu/MenuCards/Cards';
-import { SelProducts } from '../../components/SelProducts/SelProducts';
+import { AmountProducts } from '../../components/AmountProducts/amountProducts';
 import { ShopCartButton } from '../../components/Buttons/ShopCartButton';
 import { Header, Main, NameApp, Products } from './Menu.styles';
 
@@ -14,7 +14,7 @@ export const Menu = () => {
           Roll delivery
         </NameApp>
         <Products>
-          <SelProducts />
+          <AmountProducts />
           <NavLink to="/basket">
             <ShopCartButton onClick={() => {}} />
           </NavLink>

@@ -2,19 +2,20 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Input } from 'antd';
 import './form.css';
+import { InputBlock, SubmitBlock } from './Form.styles';
 
 export const Form = () => {
   return (
     <form className="form">
-      <div className="inputBlock">
+      <InputBlock>
         <span className="inputName">Ваше имя :</span>
         <Input required type="text" className="input" />
-      </div>
-      <div className="inputBlock">
+      </InputBlock>
+      <InputBlock>
         <span className="inputName">Адрес для доставки :</span>
         <Input required type="text" className="input" />
-      </div>
-      <div className="inputBlock">
+      </InputBlock>
+      <InputBlock>
         <span className="inputName">Телефон в формате xxx-xx-xx :</span>
         <Input
           required
@@ -22,9 +23,10 @@ export const Form = () => {
           pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
           className="input"
         />
-      </div>
-      <div className="submitBlock">
-      <Input type="submit" value="Заказать" className="submit" /></div>
+      </InputBlock>
+      <SubmitBlock>
+        <Input type="submit" value="Заказать" className="submit" />
+      </SubmitBlock>
     </form>
   );
 };

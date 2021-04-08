@@ -2,31 +2,20 @@
   font-size: 16px;
 }
 .input {
-  width: 40%;
+  width: 60%;
   min-width: 252px;
-}
-.inputBlock {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 14px 0;
 }
 .inputName {
   width: 234px;
 }
 .submit {
   font-size: 18px;
-  width: 30%;
+  width: 40%;
   min-width: 252px;
   color: white;
   background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 5%;
+  border-radius: 4px;
 }
 .submit:hover {
   cursor: pointer;
-  border: 2px solid #f3cd01;
-}
-.submitBlock {
-  display: flex;
-  justify-content: center;
-  margin: 30px;
 }

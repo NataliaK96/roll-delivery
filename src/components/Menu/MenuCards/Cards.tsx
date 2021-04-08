@@ -12,8 +12,8 @@ export const MenuCards = observer(() => {
   const {rolls, removeProduct, addProduct, getValueById} = store
   const menuCards = rolls.map((i) => {
     return (
-      <div className="menuCard">
-        <Card style={{ width: 240 }} cover={<img alt={i.alt} src={i.src} />}>
+      <div className="menuCard" key={i.id}>
+        <Card className="card" cover={<img alt={i.alt} src={i.src} />}>
           <Meta title={i.name} description={i.structure} className="name" />
           <div className="add">
             <div>{i.price} ₽</div>

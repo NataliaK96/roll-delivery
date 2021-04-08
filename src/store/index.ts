@@ -1,5 +1,5 @@
 import { cast, types } from 'mobx-state-tree';
-import {rolls} from '../components/Menu/rolls'
+import { rolls } from '../components/Menu/rolls';
 
 const Roll = types.model({
   id: types.number,
@@ -46,31 +46,39 @@ const Store = types
         return acc + count;
       }, 0);
     },
-    getValueById(id: number){
-        const product = self.basket.find((item)=> item.id === id);
-        return product? product.count: 0
-    }
+    getValueById(id: number) {
+      const product = self.basket.find((item) => item.id === id);
+      return product ? product.count : 0;
+    },
+    getProductById(id: number) {
+      return self.rolls.find((item) => item.id === id);
+    },
   }))
-  .actions((self)=>({
-      addProduct: (id: number)=>{
-         const product = self.basket.find((item)=> item.id === id);
-         if (product) {
-            product.increment()
-         }
-         else {
-             self.basket.push({ id, count: 1})
-         }
-      },
-      removeProduct: (id: number)=>{
-        const product = self.basket.find((item)=> item.id === id);
-        if (!product) return;
-        if(product.count > 1){product.decrement()}
-        else {
-            const filteredBasket = self.basket.filter((item)=> item.id !== id)
-            self.basket = cast(filteredBasket)
-        }
+  .actions((self) => ({
+    addProduct: (id: number) => {
+      const product = self.basket.find((item) => item.id === id);
+      if (product) {
+        product.increment();
+      } else {
+        self.basket.push({ id, count: 1 });
       }
-  }))
+    },
+    removeProduct: (id: number) => {
+      const product = self.basket.find((item) => item.id === id);
+      if (!product) return;
+      if (product.count > 1) {
+        product.decrement();
+      } else {
+        const filteredBasket = self.basket.filter((item) => item.id !== id);
+        self.basket = cast(filteredBasket);
+      }
+    },
+    deleteProduct: (id: number) => {
+      const product = self.basket.find((item) => item.id === id);
+      if (!product) return;
+      const filteredBasket = self.basket.filter((item) => item.id !== id);
+      self.basket = cast(filteredBasket);
+    },
+  }));
 
-
- export const store = Store.create({rolls})
+export const store = Store.create({ rolls });
