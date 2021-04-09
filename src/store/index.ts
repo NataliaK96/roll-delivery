@@ -79,6 +79,9 @@ const Store = types
       const filteredBasket = self.basket.filter((item) => item.id !== id);
       self.basket = cast(filteredBasket);
     },
+    resetBasket: ()=> {
+      self.basket = cast([])
+    }
   }));
 
 export const store = Store.create({ rolls });

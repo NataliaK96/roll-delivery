@@ -4,9 +4,15 @@ import { Input } from 'antd';
 import './form.css';
 import { InputBlock, SubmitBlock } from './Form.styles';
 
-export const Form = () => {
+type Props = {
+  onSubmit: ()=>void
+}
+
+export const Form:React.FC<Props> = ({onSubmit}) => {
   return (
-    <form className="form">
+    <form className="form"  onSubmit={(e)=>{
+      e.preventDefault()
+      onSubmit()}}>
       <InputBlock>
         <span className="inputName">Ваше имя :</span>
         <Input required type="text" className="input" />
@@ -16,16 +22,15 @@ export const Form = () => {
         <Input required type="text" className="input" />
       </InputBlock>
       <InputBlock>
-        <span className="inputName">Телефон в формате xxx-xx-xx :</span>
+        <span className="inputName">Телефон :</span>
         <Input
           required
           type="tel"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
           className="input"
         />
       </InputBlock>
       <SubmitBlock>
-        <Input type="submit" value="Заказать" className="submit" />
+        <Input type="submit" value="Заказать" className="submit"/>
       </SubmitBlock>
     </form>
   );

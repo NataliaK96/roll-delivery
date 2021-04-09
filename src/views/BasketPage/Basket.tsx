@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import './basket.css';
 import { Header, Main, NameApp, ReturnButton } from './Basket.styles';
@@ -6,8 +6,11 @@ import { NavLink } from 'react-router-dom';
 import { GoBack } from '../../components/Buttons/GoBack';
 import { Form } from '../../components/Form/Form';
 import {SelectedProducts} from '../../components/SelectedProducts/SelectedProducts';
+import { ModalWindow } from '../../components/ModalWindow/ModalWindow';
+import { store } from './../../store/index';
 
 export const Basket = () => {
+  const [isShow, setShow] = useState<boolean>(false);
   return (
     <>
       <Header>
@@ -23,8 +26,9 @@ export const Basket = () => {
       </Header>
       <Main>
         <SelectedProducts/>
-        <Form/>
+        <Form onSubmit={()=>setShow(true)}/>
       </Main>
+     {isShow && <ModalWindow onClose={store.resetBasket}/>}
     </>
   );
 };
