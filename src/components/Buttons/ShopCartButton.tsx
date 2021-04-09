@@ -11,7 +11,9 @@ type Props = {
 export const ShopCartButton: React.FC<Props> = ({ onClick }) => {
   return (
     <div className='shopCart'>
-      <Button className='cartButton' icon={<ShoppingCartOutlined />} onClick={onClick}>Корзина</Button>
+      <Button className='cartButton' icon={<ShoppingCartOutlined />} onClick={onClick}>
+        <span className='cartButtonName'>Корзина</span>
+        </Button>
     </div>
   );
 };

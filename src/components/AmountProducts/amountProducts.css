@@ -5,3 +5,10 @@
 .iconShop {
   margin-right: 5px;
 }
+@media (max-width: 500px) {
+  .amountProducts {
+    width: 100px;
+    font-size: 14px;
+    padding-top: 4px;
+  }
+}

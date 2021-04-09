@@ -31,3 +31,9 @@ flex-direction: column;
 margin: 20px 5%;
 }
 `
+export const Title = styled.div`
+  @media (max-width: 500px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+`;

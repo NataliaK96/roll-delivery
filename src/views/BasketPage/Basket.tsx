@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'antd/dist/antd.css';
 import './basket.css';
-import { Header, Main, NameApp, ReturnButton, EmptyBasket } from './Basket.styles';
+import { Header, Title, Main, NameApp, ReturnButton, EmptyBasket } from './Basket.styles';
 import { NavLink } from 'react-router-dom';
 import { GoBack } from '../../components/Buttons/GoBack';
 import { Form } from '../../components/Form/Form';
@@ -26,7 +26,7 @@ export const Basket = observer(() => {
       <Header>
         <NameApp>
           <img src="logo.png" alt="logo" className="logo" />
-          Roll delivery
+          <Title>Roll delivery</Title>
         </NameApp>
         <ReturnButton>
           <NavLink to="/">
@@ -36,8 +36,6 @@ export const Basket = observer(() => {
       </Header>
       <Main>
         {basketRolls}
-        {/* <SelectedProducts/>
-        <Form onSubmit={()=>setShow(true)}/> */}
       </Main>
       {isShow && <ModalWindow onClose={store.resetBasket} />}
     </>

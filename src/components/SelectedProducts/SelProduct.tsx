@@ -25,7 +25,7 @@ export const SelProduct = observer(() => {
         <NumberProduct>x {i.count}</NumberProduct>
       </DescriptionProduct>
       <DeleteProduct>
-          <PriceProduct>{p.price} ₽</PriceProduct>
+          <PriceProduct>{p.price} &#8381;</PriceProduct>
         <DeleteButton onClick={() => deleteProduct(p.id)} />
       </DeleteProduct>
     </SelProductCard>

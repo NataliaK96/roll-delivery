@@ -19,6 +19,9 @@ export const SelProductCard = styled.div`
 `;
 export const NameProduct = styled.div`
   margin-right: 12px;
+  @media (max-width: 500px) {
+    margin-right: 6px;
+  }
 `;
 export const NumberProduct = styled.div``;
 export const DescriptionProduct = styled.div`
@@ -26,6 +29,10 @@ export const DescriptionProduct = styled.div`
   align-items: center;
   font-size: 18px;
   font-weight: 500;
+  flex-wrap: wrap;
+  @media (max-width: 539px) {
+    font-size: 14px;
+  }
 `;
 export const DeleteProduct = styled.div`
   display: flex;
@@ -33,6 +40,11 @@ export const DeleteProduct = styled.div`
   margin-right: 10px;
   font-size: 18px;
   font-weight: 500;
+  @media (max-width: 539px) {
+    font-size: 16px;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
 `;
 export const PriceProduct = styled.div`
   margin-right: 20px;

@@ -2,3 +2,8 @@
   width: 70px;
   margin-right: 12px;
 }
+@media (max-width: 500px) {
+  .img-product {
+    margin-right: 4px;
+  }
+}

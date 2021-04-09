@@ -16,7 +16,7 @@ export const MenuCards = observer(() => {
         <Card className="card" cover={<img alt={i.alt} src={i.src} />}>
           <Meta title={i.name} description={i.structure} className="name" />
           <div className="add">
-            <div>{i.price} ₽</div>
+            <div>{i.price} &#8381;</div>
             <Count value={getValueById(i.id)} inc={()=>addProduct(i.id)} dec={()=>removeProduct(i.id)} />
           </div>
         </Card>

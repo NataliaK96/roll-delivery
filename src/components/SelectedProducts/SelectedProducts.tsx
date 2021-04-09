@@ -10,7 +10,7 @@ export const SelectedProducts = observer(() => {
   return (
     <SelProducts>
       <SelProduct/>
-      <Total>Всего: {sum} ₽</Total>
+      <Total>Всего: {sum} &#8381;</Total>
       </SelProducts>
     
   );

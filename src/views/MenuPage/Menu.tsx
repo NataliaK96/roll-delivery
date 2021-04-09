@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { MenuCards } from '../../components/Menu/MenuCards/Cards';
 import { AmountProducts } from '../../components/AmountProducts/amountProducts';
 import { ShopCartButton } from '../../components/Buttons/ShopCartButton';
-import { Header, Main, NameApp, Products } from './Menu.styles';
+import { Header, Title, Main, NameApp, Products } from './Menu.styles';
 
 export const Menu = () => {
   return (
@@ -11,7 +11,7 @@ export const Menu = () => {
       <Header>
         <NameApp>
           <img src="logo.png" alt="logo" className="logo" />
-          Roll delivery
+          <Title>Roll delivery</Title>
         </NameApp>
         <Products>
           <AmountProducts />

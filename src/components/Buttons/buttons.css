@@ -29,3 +29,8 @@
   color: black;
   border-color: black;
 }
+@media (max-width: 500px) {
+  .ant-btn .cartButtonName {
+    display: none;
+  }
+}

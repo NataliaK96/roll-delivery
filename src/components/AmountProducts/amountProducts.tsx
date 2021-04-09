@@ -10,7 +10,7 @@ export const AmountProducts = observer(() => {
   return (
     <div className="amountProducts">
       <ShoppingOutlined className="iconShop" />
-      {sumCount} / {sum} ₽
+      {sumCount} / {sum} &#8381;
     </div>
   );
 });
