@@ -29,3 +29,10 @@ export const ReturnButton = styled.div`
 display: flex;
 margin-right: 5%;
 `
+export const EmptyBasket = styled.div`
+display: flex;
+flex: auto;
+justify-content: center;
+align-items: center;
+font-size: 28px;
+`
